@@ -2,6 +2,7 @@
 A particle system in Haskell, OpenGL 4.x, SDL2, Yampa FRP
 
 Refs.:
+
 [https://github.com/Chase-C/Flocking-Simulation]()
 [https://blog.jle.im/entry/hamiltonian-dynamics-in-haskell.html]()
 [http://qaru.site/questions/2213282/haskell-particle-simulation-calculating-velocities-of-particles]()
