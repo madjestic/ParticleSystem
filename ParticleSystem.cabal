@@ -1,0 +1,85 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f6a87859cf2efefc1b574f2bccfa4666cd3296472d0504f27d6db822c95d912c
+
+name:           ParticleSystem
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/madjestic/ParticleSystem#readme>
+homepage:       https://github.com/madjestic/ParticleSystem#readme
+bug-reports:    https://github.com/madjestic/ParticleSystem/issues
+author:         Vladimir Lopatin
+maintainer:     madjestic13@gmail.com
+copyright:      Vladimir Lopatin
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/madjestic/ParticleSystem
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      GLUtil >=0.9.3
+    , OpenGL >=3.0.2.0
+    , Yampa >=0.10.6
+    , base >=4.7 && <5
+    , bytestring >=0.10.8.1
+    , linear >=1.20.7
+    , sdl2 >=2.3.0
+    , text >=1.2.2.2
+  exposed-modules:
+      Input
+      LoadShaders
+      Rendering
+  other-modules:
+      Paths_ParticleSystem
+  default-language: Haskell2010
+
+executable ParticleSystem
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      GLUtil >=0.9.3
+    , OpenGL >=3.0.2.0
+    , ParticleSystem
+    , Yampa >=0.10.6
+    , base >=4.7 && <5
+    , bytestring >=0.10.8.1
+    , linear >=1.20.7
+    , sdl2 >=2.3.0
+    , text >=1.2.2.2
+  other-modules:
+      Paths_ParticleSystem
+  default-language: Haskell2010
+
+test-suite ParticleSystem-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      GLUtil >=0.9.3
+    , OpenGL >=3.0.2.0
+    , ParticleSystem
+    , yampa >=0.10.6
+    , base >=4.7 && <5
+    , bytestring >=0.10.8.1
+    , linear >=1.20.7
+    , sdl2 >=2.3.0
+    , text >=1.2.2.2
+  other-modules:
+      Paths_ParticleSystem
+  default-language: Haskell2010
